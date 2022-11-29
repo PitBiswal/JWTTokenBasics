@@ -1,0 +1,23 @@
+#Basic JWT Token
+#Generate a JSON Web Token -
+Create a POST request with url 
+localhost:8080/authenticate
+Body should have valid username and password. 
+In our case username is javainuse and password is password.
+Select raw and type as JSON in the Body like below
+Body Part
+{
+"username":"javainuse",
+"password":"password"
+}
+It will Genaret JWT token like below in response
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2Njk3MTkwMzAsImlhdCI6MTY2OTcwMTAzMH0.sz5SdfiQPcHQ_JwatAt__nXbgxHlbDhTe03luExkCuGK5aunSe2YNFxYiPLJoZd7MqRr4_oWv-977zWxGez_2Q"
+}
+
+Validate the JSON Web Token
+- Try accessing the url localhost:8080/hello using the above generated token in the header as follows
+Set
+Authorization as key and value as genarated 
+Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2Njk3MTkwMzAsImlhdCI6MTY2OTcwMTAzMH0.sz5SdfiQPcHQ_JwatAt__nXbgxHlbDhTe03luExkCuGK5aunSe2YNFxYiPLJoZd7MqRr4_oWv-977zWxGez_2Q
+
